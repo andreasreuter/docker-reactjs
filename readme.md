@@ -3,6 +3,12 @@ React bundled in a Docker image. You can derive your customized Docker image fro
 
 > This Docker image is not necessary to host your React app in a production environment because React does not need Node there.
 
+### Latest React
+16.8.6
+
+### Latest Node
+v10.16.0
+
 ## Custom init.sh
 You should copy an init.sh file into your derived Docker image. A sample is documented below:
 
@@ -14,8 +20,11 @@ yarn start
 tail -f /var/log/lastlog
 ```
 
-# Latest React
-16.8.6
+# Docker Instructions
 
-# Latest Node
-v10.16.0
+## Infinite looped Docker
+Go into code directory before you issue the script below. When Docker has started then you have to start all daemons by hand because init.sh script is ignored.
+
+    docker run -P -v "`pwd`":/usr/share/nginx/html:rw \
+      <local-image> \
+      /bin/sh -c -- 'while true; do sleep 50; done;'
