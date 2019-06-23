@@ -20,6 +20,13 @@ yarn start
 tail -f /var/log/lastlog
 ```
 
+## Link React deps into your local React app
+```
+npm link react
+npm link react-dom
+npm link react-scripts
+```
+
 # Docker Instructions
 
 ## Infinite looped Docker

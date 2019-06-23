@@ -23,7 +23,8 @@ RUN npm update -g && \
   npm install -g \
     react \
     react-dom \
-    react-scripts
+    react-scripts \
+    yarn
 
 # Copy and activate reverse proxy configuration.
 RUN rm /etc/nginx/sites-enabled/default
