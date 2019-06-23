@@ -19,7 +19,11 @@ RUN cd /tmp && \
     make install
 
 # Downloads latest React or fails if an error occurs.
-RUN npm -g install react
+RUN npm update -g && \
+  npm install -g \
+    react \
+    react-dom \
+    react-scripts
 
 # Copy and activate reverse proxy configuration.
 RUN rm /etc/nginx/sites-enabled/default

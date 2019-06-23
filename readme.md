@@ -28,3 +28,12 @@ Go into code directory before you issue the script below. When Docker has starte
     docker run -P -v "`pwd`":/usr/share/nginx/html:rw \
       <local-image> \
       /bin/sh -c -- 'while true; do sleep 50; done;'
+
+# Contributor Instructions
+A warm welcome! Please read the contributor instructions below if you contribute to our open source program.
+
+## Build a Docker image again
+    docker build -t reactjs .
+
+> Sometimes you have to remove packages from Docker image then you should build it again with the command below:
+    docker build --no-cache -t reactjs .
