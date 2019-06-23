@@ -36,4 +36,5 @@ A warm welcome! Please read the contributor instructions below if you contribute
     docker build -t reactjs .
 
 > Sometimes you have to remove packages from Docker image then you should build it again with the command below:
+
     docker build --no-cache -t reactjs .
